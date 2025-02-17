@@ -476,3 +476,100 @@
     </script>
 </body>
 </html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Existing meta tags and links remain unchanged -->
+    <!-- Add Font Awesome for dark mode icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Modified Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <!-- Enhanced Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="RaysunTech Logo" height="40" class="mr-2">
+                Raysun Tech
+            </a>
+            
+            <!-- Control Buttons -->
+            <div class="d-flex align-items-center">
+                <button id="languageToggle" class="btn btn-sm btn-outline-secondary mr-2">
+                    FR
+                </button>
+                <button id="darkModeToggle" class="btn btn-sm btn-outline-secondary">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!-- Rest of navbar remains unchanged -->
+        </div>
+    </nav>
+
+    <!-- Add this style section -->
+    <style>
+        /* Dark mode styles */
+        body.dark-mode {
+            --primary-color: #63a4ff;
+            --secondary-color: #4dab9a;
+            --text-color: #e0e0e0;
+            --light-bg: #2d2d2d;
+            background-color: #1a1a1a;
+            color: var(--text-color);
+        }
+
+        .dark-mode .navbar {
+            background-color: #2d2d2d !important;
+        }
+
+        .dark-mode .testimonial-card,
+        .dark-mode .services-section .col-md-4 {
+            background-color: #333 !important;
+            color: var(--text-color);
+        }
+
+        .dark-mode .footer-section {
+            background: linear-gradient(45deg, #1a1a1a 0%, #2d2d2d 100%);
+        }
+    </style>
+
+    <!-- Add this JavaScript -->
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        // Check localStorage for dark mode preference
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if(isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            darkModeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+        });
+
+        // Language Toggle (Basic Implementation)
+        const languageToggle = document.getElementById('languageToggle');
+        let isFrench = false;
+        
+        languageToggle.addEventListener('click', () => {
+            isFrench = !isFrench;
+            languageToggle.textContent = isFrench ? 'EN' : 'FR';
+            // Add language switching logic here
+            console.log('Language switched to:', isFrench ? 'French' : 'English');
+        });
+    </script>
+</body>
+</html>

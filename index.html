@@ -27,6 +27,7 @@
             background-color: var(--light-bg);
             line-height: 1.6;
             transition: background-color 0.3s, color 0.3s;
+            scroll-padding-top: 70px; /* Prevent anchor links from being hidden behind navbar */
         }
 
         /* Dark mode styles */
@@ -79,6 +80,33 @@
                         url('hero-bg.jpg') center/cover;
             padding: 150px 0;
             color: white;
+
+
+            @media (max-width: 768px) {
+            .hero-section {
+                padding: 100px 0 50px !important;
+            }
+        
+            /* Increase mobile navbar height */
+            .navbar {
+                padding: 0.5rem 0;
+            }
+        
+            /* Adjust language toggle layout */
+            .navbar .d-flex {
+                flex-direction: row-reverse;
+                gap: 0.5rem;
+            }
+        
+            /* Optimize nav items for French text */
+            .navbar-nav .nav-link {
+                font-size: 0.9rem;
+                padding: 0.5rem 1rem;
+            }
+
+
+
+            
         }
 
         .hero-section h1 {
@@ -241,6 +269,26 @@
             .btn {
                 padding: 0.6rem 1.5rem;
             }
+            section {
+    padding-top: 30px;
+    scroll-margin-top: 70px;
+}
+
+/* Specific adjustments for French language */
+body:lang(fr) .navbar-nav .nav-link {
+    font-size: 0.85rem; /* Slightly smaller font for French text */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Mobile-specific French adjustments */
+@media (max-width: 768px) {
+    body:lang(fr) .navbar-brand {
+        max-width: 120px; /* Prevent logo from pushing buttons */
+    }
+    
+    body:lang(fr) #languageToggle {
+        padding: 0.25rem 0.5rem; /* More compact button */
+    }
         }
     </style>
 </head>
@@ -470,8 +518,16 @@
         });
 
         // Language Toggle
-        const languageToggle = document.getElementById('languageToggle');
-        let isFrench = false;
+        //const languageToggle = document.getElementById('languageToggle');
+        //let isFrench = false;//
+
+        // Update the language toggle script to handle HTML lang attribute
+languageToggle.addEventListener('click', () => {
+    isFrench = !isFrench;
+    languageToggle.textContent = isFrench ? 'EN' : 'FR';
+    document.documentElement.lang = isFrench ? 'fr' : 'en';
+    updateContent();
+});
 
         const translations = {
             "welcome": { en: "Innovative IT Solutions for Your Business", fr: "Des solutions informatiques innovantes pour votre entreprise" },

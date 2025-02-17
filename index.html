@@ -464,6 +464,42 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <script>
+        <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        // Load dark mode preference
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if(isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            darkModeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+        });
+
+        // Language Toggle
+        const languageToggle = document.getElementById('languageToggle');
+        let isFrench = false;
+        
+        languageToggle.addEventListener('click', () => {
+            isFrench = !isFrench;
+            languageToggle.textContent = isFrench ? 'EN' : 'FR';
+            // Add language switching logic here
+            console.log('Language switched to:', isFrench ? 'French' : 'English');
+        });
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {

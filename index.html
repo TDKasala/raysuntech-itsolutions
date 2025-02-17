@@ -522,12 +522,7 @@ body:lang(fr) .navbar-nav .nav-link {
         let isFrench = false;//
 
         // Update the language toggle script to handle HTML lang attribute
-languageToggle.addEventListener('click', () => {
-    isFrench = !isFrench;
-    languageToggle.textContent = isFrench ? 'EN' : 'FR';
-    document.documentElement.lang = isFrench ? 'fr' : 'en';
-    updateContent();
-});
+
 
         const translations = {
             "welcome": { en: "Innovative IT Solutions for Your Business", fr: "Des solutions informatiques innovantes pour votre entreprise" },

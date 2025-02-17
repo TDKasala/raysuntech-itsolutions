@@ -7,7 +7,7 @@
     <meta name="author" content="RaysunTech Solutions">
     <meta name="keywords" content="IT solutions, web design, cloud services, IT consulting">
     <meta name="theme-color" content="#4682b4">
-    <title>RTech Solutions- IT Services</title>
+    <title>RTech Solutions - IT Services</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -321,7 +321,7 @@
                         <div class="card border-0 shadow-sm">
                             <div class="card-body text-center p-4">
                                 <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
-                                <p class="card-text mb-4">"RTech Solutions transformed our online presence with a stunning website. Their attention to detail and professional approach made the entire process seamless."</p>
+                                <p class="card-text mb-4">"RTech Solutions transformed our online presence with a stunning website. Their attention to detail and professional approach made the entire process smooth and efficient."</p>
                                 <div class="testimonial-author">
                                     <h5 class="mb-1">Jiresse Mungaza</h5>
                                     <p class="text-muted mb-0">Director, <a href="https://www.numberonebuilds.co.za">Number One Builds</a></p>
@@ -353,7 +353,7 @@
                         <div class="card border-0 shadow-sm">
                             <div class="card-body text-center p-4">
                                 <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
-                                <p class="card-text mb-4">"RTech Solutions provided exceptional service and expertise. Our online presence has never been better."</p>
+                                <p class="card-text mb-4">RTech Solutions transformed our online presence with a stunning website. Their attention to detail and professional approach made the entire process smooth and efficient."</p>
                                 <div class="testimonial-author">
                                     <h5 class="mb-1">Stanley Shonga</h5>
                                     <p class="text-muted mb-0">Managing Director, <a href="https://www.shonga.co.za">Shonga</a></p>
@@ -417,7 +417,7 @@
         </div>
     </footer>
 
-     <!-- Modals -->
+    <!-- Modals -->
     <!-- Terms Modal -->
     <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -464,11 +464,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
     <script>
         // Dark Mode Toggle
         const darkModeToggle = document.getElementById('darkModeToggle');
@@ -489,50 +484,42 @@
         });
 
         // Language Toggle
-  const languageToggle = document.getElementById('languageToggle');
-let isFrench = false;
+        const languageToggle = document.getElementById('languageToggle');
+        let isFrench = false;
 
-// Translation dictionary
-const translations = {
-  "welcome": {
-    en: "Welcome",
-    fr: "Bienvenue"
-  },
-  "greeting": {
-    en: "Hello!",
-    fr: "Bonjour !"
-  },
-  "content": {
-    en: "This is our website.",
-    fr: "Ceci est notre site web."
-  }
-  // Add more translations as needed
-};
+        const translations = {
+            "welcome": {
+                en: "Welcome",
+                fr: "Bienvenue"
+            },
+            "greeting": {
+                en: "Hello!",
+                fr: "Bonjour !"
+            },
+            "content": {
+                en: "This is our website.",
+                fr: "Ceci est notre site web."
+            }
+        };
 
-function updateContent() {
-  const lang = isFrench ? 'fr' : 'en';
-  
-  // Update all elements with data-i18n attribute
-  document.querySelectorAll('[data-i18n]').forEach(element => {
-    const key = element.dataset.i18n;
-    if (translations[key]) {
-      element.textContent = translations[key][lang];
-    }
-  });
+        function updateContent() {
+            const lang = isFrench ? 'fr' : 'en';
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.dataset.i18n;
+                if (translations[key]) {
+                    element.textContent = translations[key][lang];
+                }
+            });
+            console.log('Language switched to:', isFrench ? 'French' : 'English');
+        }
 
-  // Update any other language-specific elements here
-  console.log('Language switched to:', isFrench ? 'French' : 'English');
-}
-
-languageToggle.addEventListener('click', () => {
-  isFrench = !isFrench;
-  languageToggle.textContent = isFrench ? 'EN' : 'FR';
-  updateContent();
-});
-
-// Initialize content on page load
-updateContent();
+        languageToggle.addEventListener('click', () => {
+            isFrench = !isFrench;
+            languageToggle.textContent = isFrench ? 'EN' : 'FR';
+            updateContent();
         });
+
+        updateContent();
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

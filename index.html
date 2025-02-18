@@ -369,9 +369,9 @@
     <script>
         // Dark Mode and Language Toggle
         const darkModeToggle = document.getElementById('darkModeToggle');
-        const languageToggle = document.getElementById('languageToggle');
+        //const languageToggle = document.getElementById('languageToggle');
         const body = document.body;
-        let isFrench = false;
+        //let isFrench = false;
 
         // Dark Mode Logic
         function toggleDarkMode() {
@@ -414,16 +414,16 @@
             "privacyContent2": { en: "We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent.", fr: "Nous ne demandons des informations personnelles que lorsque nous en avons réellement besoin pour vous fournir un service. Nous les collectons par des moyens équitables et légaux, avec votre connaissance et votre consentement." }
         };
 
-        function updateContent() {
-            const lang = isFrench ? 'fr' : 'en';
-            document.documentElement.lang = lang;
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.dataset.i18n;
-                if (translations[key]) {
-                    element.textContent = translations[key][lang];
-                }
-            });
-        }
+        //function updateContent() {
+            //const lang = isFrench ? 'fr' : 'en';
+            //document.documentElement.lang = lang;
+            //document.querySelectorAll('[data-i18n]').forEach(element => {
+              //  const key = element.dataset.i18n;
+                //if (translations[key]) {
+                  //  element.textContent = translations[key][lang];
+                //}
+            //});
+        //}
 
         // Event Listeners
         darkModeToggle.addEventListener('click', toggleDarkMode);

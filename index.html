@@ -228,8 +228,6 @@
         </div>
     </header>
 
-    <!-- Rest of the sections remain similar with proper HTML structure -->
-    <!-- Updated testimonial section example -->
     <section id="services" class="services-section py-5">
         <div class="container">
             <h2 class="text-center" data-i18n="ourServices">Our Services</h2>
@@ -252,6 +250,7 @@
             </div>
         </div>
     </section>
+
     <section id="testimonials" class="testimonials-section py-5 bg-light">
         <div class="container">
             <h2 class="text-center mb-5" data-i18n="testimonialsHeading">What Our Clients Say</h2>
@@ -261,9 +260,8 @@
                         <div class="card border-0 shadow-sm">
                             <div class="card-body text-center p-4">
                                 <i class="fas fa-quote-left fa-2x text-primary mb-3" aria-hidden="true"></i>
-                                <p class="card-text mb-4" data-i18n="testimonial1"></p>
-                                    <p class="card-text mb-4" data-i18n="testimonial1">"RTech Solutions transformed our online presence with a stunning website. Their attention to detail and professional approach made the entire process smooth and efficient."</p>
-                                    <div class="testimonial-author">
+                                <p class="card-text mb-4" data-i18n="testimonial1">"RTech Solutions transformed our online presence with a stunning website. Their attention to detail and professional approach made the entire process smooth and efficient."</p>
+                                <div class="testimonial-author">
                                     <h5 class="mb-1">Jiresse Mungaza</h5>
                                     <p class="text-muted mb-0" data-i18n="director">Director, <a href="https://www.numberonebuilds.co.za">Number One Builds</a></p>
                                 </div>
@@ -271,7 +269,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Other testimonials -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="testimonial-card h-100">
                         <div class="card border-0 shadow-sm">
@@ -286,7 +283,6 @@
                         </div>
                     </div>
                 </div>
-    
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="testimonial-card h-100">
                         <div class="card border-0 shadow-sm">
@@ -303,11 +299,8 @@
                 </div>
             </div>
         </div>
-            </div>
-        </div>
     </section>
 
-    <!-- Updated team section -->
     <section id="about" class="about-section py-5">
         <div class="container">
             <h2 class="text-center" data-i18n="meetTheTeam">Meet the Team</h2>
@@ -329,7 +322,7 @@
         </div>
     </section>
 
-     <section id="contact" class="contact-section py-5">
+    <section id="contact" class="contact-section py-5">
         <div class="container">
             <h2 class="text-center">Contact Us</h2>
             <ul class="list-unstyled text-center">
@@ -369,33 +362,13 @@
                     <p data-i18n="termsContent1">Welcome to Raysun Tech. These terms and conditions outline the rules and regulations for the use of our website.</p>
                     <p data-i18n="termsContent2">By accessing this website we assume you accept these terms and conditions. Do not continue to use Raysun Tech if you do not agree to all of the terms and conditions stated on this page.</p>
                 </div>
-                <div class="modal-footer">
+                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="modal fade" id="privacyModal" tabindex="-1" role="dialog" aria-labelledby="privacyModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                   <p data-i18n="privacyContent1">Your privacy is important to us. It is Raysun Tech's policy to respect your privacy regarding any information we may collect from you across our website.</p>
-                    <p data-i18n="privacyContent2">We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    
     <!-- Updated JavaScript section -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
@@ -418,7 +391,7 @@
 
         // Language Management
         const translations = {
-           "welcome": { en: "Innovative IT Solutions for Your Business", fr: "Des solutions informatiques innovantes pour votre entreprise" },
+            "welcome": { en: "Innovative IT Solutions for Your Business", fr: "Des solutions informatiques innovantes pour votre entreprise" },
             "tagline": { en: "Providing top-notch web design, cloud services, and IT consulting.", fr: "Fourniture de services de conception web, de cloud et de conseil en informatique de premier ordre." },
             "services": { en: "Services", fr: "Services" },
             "about": { en: "About Us", fr: "À propos" },
@@ -433,21 +406,20 @@
             "contactUs": { en: "Contact Us", fr: "Nous contacter" },
             "getQuote": { en: "Get a Quote", fr: "Obtenir un devis" },
             "terms": { en: "Terms", fr: "Conditions" },
-            "privacy": { en: "Privacy Policy", fr: "Politique de confidentialité" }
+            "privacy": { en: "Privacy Policy", fr: "Politique de confidentialité" },
             "testimonialsHeading": { en: "What Our Clients Say", fr: "Ce que disent nos clients" },
             "testimonial1": { en: "\"RTech Solutions transformed our online presence with a stunning website. Their attention to detail and professional approach made the entire process smooth and efficient.\"", fr: "\"RTech Solutions a transformé notre présence en ligne avec un site web magnifique. Leur souci du détail et approche professionnelle ont rendu l'ensemble du processus fluide et efficace.\"" },
             "testimonial2": { en: "\"Excellent IT consulting services that helped us streamline our operations. Their team's expertise and dedication to our success was impressive.\"", fr: "\"D'excellents services de conseil en informatique qui nous ont aidés à rationaliser nos opérations. L'expertise de leur équipe et leur dévouement à notre succès étaient impressionnants.\"" },
             "testimonial3": { en: "\"RTech Solutions transformed our online presence with a stunning website. Their attention to detail and professional approach made the entire process smooth and efficient.\"", fr: "\"RTech Solutions a transformé notre présence en ligne avec un site web magnifique. Leur souci du détail et approche professionnelle ont rendu l'ensemble du processus fluide et efficace.\"" },
             "director": { en: "Director", fr: "Directeur" },
             "managingDirector": { en: "Managing Director", fr: "Directeur Général" },
-            "missionStatement": { en: "Our mission is to provide innovative IT solutions that drive business success. We value integrity, excellence, and customer satisfaction.", fr: "Notre mission est de fournir des solutions informatiques innovantes qui stimulent la réussite commerciale. Nous valorisons l'intégrité, l'excellence et la satisfaction client." },
             "meetTheTeam": { en: "Meet the Team", fr: "Rencontrez l'équipe" },
             "teamDescription": { en: "Software Engineer | AWS Cloud Practitioner | Tech Enthusiast", fr: "Ingénieur Logiciel | Praticien AWS Cloud | Passionné de Technologie" },
             "copyright": { en: "© 2025 RTech Solutions. All rights reserved.", fr: "© 2025 RTech Solutions. Tous droits réservés." },
             "termsContent1": { en: "Welcome to Raysun Tech. These terms and conditions outline the rules and regulations for the use of our website.", fr: "Bienvenue chez Raysun Tech. Ces conditions générales définissent les règles et réglementations pour l'utilisation de notre site web." },
             "termsContent2": { en: "By accessing this website we assume you accept these terms and conditions. Do not continue to use Raysun Tech if you do not agree to all of the terms and conditions stated on this page.", fr: "En accédant à ce site web, nous supposons que vous acceptez ces conditions générales. Ne continuez pas à utiliser Raysun Tech si vous n'acceptez pas toutes les conditions énoncées sur cette page." },
             "privacyContent1": { en: "Your privacy is important to us. It is Raysun Tech's policy to respect your privacy regarding any information we may collect from you across our website.", fr: "Votre vie privée est importante pour nous. La politique de Raysun Tech est de respecter votre confidentialité concernant toute information que nous pourrions collecter sur notre site web." },
-            "privacyContent2": { en: "We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent.", fr: "Nous ne demandons des informations personnelles que lorsque nous en avons réellement besoin pour vous fournir un service. Nous les collectons par des moyens équitables et légaux, avec votre connaissance et votre consentement." },
+            "privacyContent2": { en: "We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and lawful means, with your knowledge and consent.", fr: "Nous ne demandons des informations personnelles que lorsque nous en avons réellement besoin pour vous fournir un service. Nous les collectons par des moyens équitables et légaux, avec votre connaissance et votre consentement." }
         };
 
         function updateContent() {

@@ -97,8 +97,8 @@
         }
 
         .btn {
-            padding: 0.8rem 2rem;
-            border-radius: 30px;
+            padding: 0.6rem 1rem;
+            border-radius: 25px;
             text-transform: uppercase;
             font-weight: 500;
             letter-spacing: 1px;
@@ -427,11 +427,11 @@
 
         // Event Listeners
         darkModeToggle.addEventListener('click', toggleDarkMode);
-        languageToggle.addEventListener('click', () => {
-            isFrench = !isFrench;
-            languageToggle.textContent = isFrench ? 'EN' : 'FR';
-            updateContent();
-        });
+        //languageToggle.addEventListener('click', () => {
+            //isFrench = !isFrench;
+            //languageToggle.textContent = isFrench ? 'EN' : 'FR';
+            //updateContent();
+        //});
 
         // Initialization
         function initializeApp() {
@@ -442,11 +442,11 @@
             }
             
             // Language
-            if (navigator.language.startsWith('fr')) {
-                isFrench = true;
-                languageToggle.textContent = 'EN';
-                updateContent();
-            }
+            //if (navigator.language.startsWith('fr')) {
+              //  isFrench = true;
+                //languageToggle.textContent = 'EN';
+                //updateContent();
+            //}
             
             // Smooth Scroll
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
